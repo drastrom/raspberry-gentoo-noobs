@@ -12,7 +12,11 @@ stage4/packages:
 	cpupower
 	raspberrypi-userland-bin
 	wireless-tools
+	bluez
 	rng-tools
+	iputils
+	usbutils
+	iproute2
 # caller must specify:
 # snapshot
 # version_stamp
