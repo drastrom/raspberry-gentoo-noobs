@@ -1,0 +1,9 @@
+#from chromiumos-overlay
+# USE=bindist only controls elliptic curve support now, and we want it
+dev-libs/openssl bindist
+# openssh tracks USE=bindist only because openssl does
+net-misc/openssh bindist
+
+# Resolve circular dependency between libcap and pam
+# htttp://crbug.com/508630 (see #8)
+sys-libs/libcap pam
