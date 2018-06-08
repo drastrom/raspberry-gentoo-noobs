@@ -17,6 +17,7 @@ stage4/packages:
 	iputils
 	usbutils
 	iproute2
+stage4/root_overlay: /root/raspberry-gentoo-noobs/root_overlay
 # caller must specify:
 # snapshot
 # version_stamp
