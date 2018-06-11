@@ -18,5 +18,14 @@ root:raspberry
 pi:raspberry
 END
 
-
 sed -i '/NOPASSWD: ALL/ s/^# //' /etc/sudoers
+sed -i '/^s[01]:/ s/^/#/' /etc/inittab
+
+mkdir /lib/rc/cache
+touch /lib/rc/cache/shutdowntime
+
+cd /etc/init.d
+ln -sf net.lo net.eth0
+ln -sf net.lo net.wlan0
+cd /dev
+ln -sf ttyAMA0 serial1

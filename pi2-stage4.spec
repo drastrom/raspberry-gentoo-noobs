@@ -18,11 +18,17 @@ stage4/packages:
 	usbutils
 	iproute2
 	sudo
+	rfkill
 stage4/root_overlay: /root/raspberry-gentoo-noobs/root_overlay
 #Contrary to the docs, stage4/users does not seem to be implemented
 #so will have to do it in the fsscript instead
 #stage4/users: pi
 stage4/fsscript: fsscript.sh
+stage4/rcadd:
+	swclock|boot
+	cpupower|default
+stage4/rcdel:
+	hwclock|boot
 # caller must specify:
 # snapshot
 # version_stamp
