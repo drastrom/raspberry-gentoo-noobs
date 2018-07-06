@@ -24,6 +24,12 @@ sed -i '/^s[01]:/ s/^/#/' /etc/inittab
 mkdir /lib/rc/cache
 touch /lib/rc/cache/shutdowntime
 
+# DAMN unicode names make NOOBS angry
+rm -f /usr/share/ca-certificates/mozilla/*Hizmet*
+rm -f /usr/share/ca-certificates/mozilla/*Class_Gold*
+find /etc/ssl/certs/ -xtype l -delete
+update-ca-certificates
+
 cd /etc/init.d
 ln -sf net.lo net.eth0
 ln -sf net.lo net.wlan0
