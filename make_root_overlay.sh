@@ -15,5 +15,10 @@ cp -f gitmodules/bluez-firmware/broadcom/BCM434* root_overlay/lib/firmware
 cp -Rf gitmodules/firmware/modules/*-v7+/ root_overlay/lib/modules/
 cp -f gitmodules/pi-bluetooth/usr/bin/* root_overlay/usr/bin/
 
-# TODO add config.txt and cmdline.txt
-tar -C gitmodules/firmware/boot -Jcf boot.tar.xz .
+tar -C gitmodules/firmware/boot -cf boot.tar .
+# add config.txt and cmdline.txt
+tar -C boot_overlay -rf boot.tar ./config.txt ./cmdline.txt
+BOOT_FILESIZE=$(($(stat --printf="%s" boot.tar)+0))
+# TODO subst into partitions.json
+echo $BOOT_FILESIZE > boot.tar.size
+xz -T 0 boot.tar
