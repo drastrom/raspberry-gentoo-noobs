@@ -3,7 +3,7 @@
     "kernel": "4.14",
     "name": "Gentoo",
     "password": "raspberry",
-    "release_date": "2018-07-02",
+    "release_date": "@@@DATE@@@",
     "supported_models": [
         "Pi 2",
         "Pi 3"
