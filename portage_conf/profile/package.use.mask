@@ -3,6 +3,8 @@
 dev-libs/openssl bindist
 # openssh tracks USE=bindist only because openssl does
 net-misc/openssh bindist
+# now wpa_supplicant needs bindist too!
+net-wireless/wpa_supplicant bindist
 
 # Resolve circular dependency between libcap and pam
 # htttp://crbug.com/508630 (see #8)
