@@ -1,4 +1,4 @@
 #!/bin/bash
 
-STAGE4_BASENAME="`basename "$1" .bz2`"
-bzcat "$1" | tee >(wc -c > "$STAGE4_BASENAME.size") | xz -zc -T 0 - > "$STAGE4_BASENAME.xz"
+STAGE4_BASENAME="`basename "$1" .xz`"
+xzcat "$1" | wc -c > "`dirname "$1"`/$STAGE4_BASENAME.size"
