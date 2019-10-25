@@ -9,7 +9,7 @@ stage4/use: neon
 stage4/packages:
 	wpa_supplicant
 	dhcpcd
-	ntp
+	net-misc/ntp
 	cpupower
 	raspberrypi-userland-bin
 	wireless-tools
