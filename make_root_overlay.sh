@@ -3,7 +3,7 @@
 mkdir -p gitmodules
 pushd gitmodules
 git clone --depth 1 https://github.com/RPi-Distro/firmware.git
-git clone https://github.com/RPi-Distro/firmware-nonfree.git
+git clone --depth 1 https://github.com/RPi-Distro/firmware-nonfree.git
 git clone https://github.com/RPi-Distro/bluez-firmware.git
 git clone https://github.com/RPi-Distro/pi-bluetooth.git
 popd
