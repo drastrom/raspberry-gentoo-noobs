@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#HACK for https://bugs.gentoo.org/show_bug.cgi?id=690760
-#rebuild gnutls once other packages are in place so it can
-#verify ssl certs properly and portage cam update gentoo keys
-emerge --quiet --oneshot --buildpkg y --usepkg n net-libs/gnutls
-
 if [ "$(getent group games | cut -d: -f1)" != "games" ]
 then
 	echo "Adding games group"
