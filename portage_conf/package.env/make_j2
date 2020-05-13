@@ -1,0 +1,5 @@
+# packages which need too much memory during build
+# to use more than 2 jobs on a 1GB Raspberry Pi
+sys-devel/gcc make_j2.conf
+sys-devel/llvm make_j2.conf
+sys-devel/binutils make_j2.conf
